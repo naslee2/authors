@@ -41,6 +41,6 @@ export class HomeComponent implements OnInit {
   editAuthorHome(x){
     console.log(x);
     this._router.navigate(['/edit/'+x['_id']]);
-    this._httpService.data = x['_id'];
+    this._httpService.data = x;
   }
 }

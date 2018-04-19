@@ -6,7 +6,6 @@ export class HttpService {
   constructor(private _http: HttpClient) { }
 
   addAuthor(newAuthor){
-    console.log(newAuthor)
     return this._http.post('/new', {name: newAuthor});
   }
 
@@ -15,7 +14,6 @@ export class HttpService {
   }
 
   editAuthor(edit){
-    console.log("sdf",edit.name, edit)
     return this._http.put('/update/'+edit.id, edit)
   }
 

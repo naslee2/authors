@@ -67,10 +67,8 @@ app.get('/author', function(request, response) { //view all tasks
 })
 
 app.put("/update/:id", function(request, response) { //update task
-    console.log('woah',request.params.id)
     Author.findOne({_id: request.params.id}, function(err, author){
         author.name = request.body.name;
-        console.log(request.params.id)
     author.save(function(err){
         if(err){
             console.log("error update")

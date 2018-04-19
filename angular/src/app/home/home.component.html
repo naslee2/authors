@@ -2,10 +2,18 @@
 <p>We have favorite quotes by: </p>
 
 <div>
-    <li *ngFor="let x of homedata">
-        {{x['name']}}
-        <button (click)="deleteAuthorHome(x)" >Delete</button>
-        <button (click)="editAuthorHome(x)" >Edit</button>
-    </li>
+    <table>
+        <tr>
+            <th>Author</th>
+            <th>Actions Avaliable</th> 
+        </tr>
+        <tr *ngFor="let x of homedata">
+            <td>{{x['name']}}</td>
+            <td>
+                <button (click)="deleteAuthorHome(x)" >Delete</button>
+                <button (click)="editAuthorHome(x)" >Edit</button>
+            </td> 
+        </tr>
+    </table>
 </div>
 
