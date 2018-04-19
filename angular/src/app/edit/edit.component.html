@@ -1,0 +1,9 @@
+<a [routerLink]="['/home']">Home</a>
+<div>
+  <p>Edit this Author</p>
+    <form (submit)="onClickEdit()">
+      Name: <input type="text" name="edit.name" [(ngModel)]="edit.name" /><br>
+      <input type="submit" value="Submit"/>
+    </form>
+    <button [routerLink]="['/home']">Cancel</button>
+</div>

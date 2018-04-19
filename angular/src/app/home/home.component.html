@@ -1,0 +1,11 @@
+<a [routerLink]="['/new']">New</a>
+<p>We have favorite quotes by: </p>
+
+<div>
+    <li *ngFor="let x of homedata">
+        {{x['name']}}
+        <button (click)="deleteAuthorHome(x)" >Delete</button>
+        <button (click)="editAuthorHome(x)" >Edit</button>
+    </li>
+</div>
+
